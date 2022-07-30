@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.vinjcent.mapper.UserMapper">
+
+    <resultMap id="queryRoles" type="Role">
+        <id column="id" property="id" />
+        <result column="name" property="name" />
+    </resultMap>
+
+    <resultMap id="queryPerms" type="Permission">
+        <result column="name" property="name" />
+    </resultMap>
+
+    <select id="queryOneByUsername" resultType="User">
+        select * from test.user where username = #{username}
+    </select>
+
+
+    <select id="queryRolesByUserId" resultMap="queryRoles" parameterType="integer">
+        select r.id as id, r.name as name
+            from role r
+               right join viewrole vr
+                          on r.id = vr.roleId
+               right join user u
+                          on vr.userId = u.id
+               where u.id = #{uid}
+    </select>
+
+
+    <select id="queryPermsByRoleId" resultType="Permission">
+        select p.name as name
+            from permission p
+               left join viewperm vp
+                          on p.id = vp.permId
+               left join role r
+                          on vp.roleId = r.id
+        where vp.roleId = #{rid}
+    </select>
+</mapper>

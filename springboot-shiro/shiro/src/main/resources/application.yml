@@ -1,0 +1,91 @@
+# 端口号
+server:
+  port: 3035
+# 应用名称
+spring:
+  application:
+    name: shiro
+  # 配置数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      url: jdbc:mysql://localhost:3306/test?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+      username: root
+      password: 123456
+      # 初始化创建initialSize个连接
+      initialSize: 10
+      # 最小连接池数量,如果空闲的连接数大于该值,则关闭多余的连接,反之则创建更多的连接以满足最小连接数要求
+      min-idle: 10
+      # 如果当前池中正在使用的连接池数等于maxActive,则会等待一段时间,等待其他操作释放掉某一个连接
+      max-active: 100
+      # 如果这个等待时间超过了maxWait,则会报错(单位: 毫秒)
+      max-wait: 60000
+      # 如果当前连接池中某个连接在空闲了timeBetweenEvictionRunsMillis时间后仍然没有使用,则被物理性的关闭掉(单位: 毫秒)
+      time-between-eviction-runs-millis: 60000
+      # 连接的最小生存时间,连接保持空闲而不被驱逐的最小时间(单位: 毫秒)
+      minEvictableIdleTimeMillis: 300000
+      # 验证数据库服务可用性的sql,用来检测连接是否有效的sql,因数据库方言而差,例如 oracle 应该写成 SELECT 1 FROM DUAL
+      validationQuery: SELECT 1 FROM DUAL
+      # 申请连接时检测空闲时间,根据空闲时间再检测连接是否有效,建议配置为true,不影响性能,并且保证安全性. 申请连接的时候检测,如果空闲时间大于timeBetweenEvictionRun,就测试连接是否有效,不会直接剔除;如果空闲时间超过了minEvictableIdleTimeMillis则会直接剔除
+      testWhileIdle: true
+      # 申请连接时直接检测连接是否有效.申请连接时执行validationQuery检测连接是否有效,做了这个配置会降低性能
+      testOnBorrow: false
+      # 归还连接时检测连接是否有效.归还连接时执行validationQuery检测连接是否有效,做了这个配置会降低性能
+      testOnReturn: false
+      # 开启PSCache
+      # poolPreparedStatements: true
+      # 连接出错后再尝试连接三次
+      # connectionErrorRetryAttempts: 3
+      # 数据库服务宕机自动重连机制
+      # breakAfterAcquireFailure: true
+      # 连接出错后重试时间间隔
+      # timeBetweenConnectErrorMillis: 300000
+      # 异步初始化策略
+      # asyncInit: true
+      # 是否自动回收超时连接
+      # remove-abandoned: true
+      # 超时时间(以秒数为单位) 超过此值后,druid将强制回收该连接
+      # remove-abandoned-timeout: 1800
+      # 事务超时时间
+      # transaction-query-timeout: 6000
+
+
+      # 配置监控统计拦截的filters,stat:监控统计、log4j：日志记录、wall：防御sql注入
+      # 如果允许时报错  java.lang.ClassNotFoundException: org.apache.log4j.Priority
+      # 则导入 log4j 依赖即可,Maven 地址：https://mvnrepository.com/artifact/log4j/log4j
+      filters: stat,wall,log4j
+      maxPoolPreparedStatementPerConnectionSize: 20
+      useGlobalDataSourceStat: true
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+
+  # redis
+  redis:
+    host: localhost
+    port: 6379
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+    timeout: 0
+
+
+
+
+
+# 配置mybatis-plus
+mybatis-plus:
+  type-aliases-package: com.vinjcent.pojo
+  mapper-locations: classpath*:com/vinjcent/mapper/**/*.xml
+  configuration:
+    # 开启缓存
+    cache-enabled: true
+    # 开启驼峰命名
+    map-underscore-to-camel-case: true
+    # 开启日志监控
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+
+

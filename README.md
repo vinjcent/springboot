@@ -1,10 +1,10 @@
 # shiro
 
 #### 介绍
-springboot整合shiro
+springboot整合框架
 
 #### 软件架构
-软件架构说明
+springboot整合shiro
 
 
 #### 安装教程

@@ -46,6 +46,19 @@
                 </exclusion>
             </exclusions>
         </dependency>
+        <!--操作Redis-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+        <!--如果有报错,就是连接池问题,需要导入下面这个依赖-->
+        <!--如果加入连接池依赖都没有用,则需要降低SpringBoot版本-->
+        <!--连接池依赖-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-pool2</artifactId>
+        </dependency>
+
         <!--log4j-->
         <dependency>
             <groupId>log4j</groupId>

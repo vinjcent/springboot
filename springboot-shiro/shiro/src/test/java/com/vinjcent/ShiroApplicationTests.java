@@ -9,6 +9,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+
+
 @SpringBootTest
 class ShiroApplicationTests {
 
@@ -17,7 +19,6 @@ class ShiroApplicationTests {
 
     @Test
     void contextLoads() {
-        System.out.println(userService.queryOneByUsername("zhangsan"));
     }
 
 

@@ -87,7 +87,7 @@ public class ShiroController {
             model.addAttribute("msg","账户已锁定！");
             return "login";
         } catch (ExcessiveAttemptsException e) {
-            model.addAttribute("msg","用户名或密码错误次数过多！");
+            model.addAttribute("msg","用户名或密码错误次数过多!请30s后重试!");
             return "login";
         } catch (AuthenticationException e) {
             model.addAttribute("msg","用户名或密码不正确！");

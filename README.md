@@ -1,10 +1,10 @@
-# shiro
+# SpringBoot
 
 #### 介绍
 springboot整合框架
 
 #### 软件架构
-springboot整合shiro
+- springboot整合shiro
 
 
 #### 安装教程
@@ -21,11 +21,7 @@ springboot整合shiro
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
+vinjcent
 
 #### 特技
 

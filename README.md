@@ -5,6 +5,7 @@ springboot整合框架
 
 #### 软件架构
 - springboot整合shiro
+- springboot整合jwt
 
 
 #### 安装教程

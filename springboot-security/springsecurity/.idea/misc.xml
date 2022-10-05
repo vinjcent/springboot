@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/spring-security-01/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-02/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-03/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-04-separate/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-03-web/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-05-web-vertification-code/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-05-web-verification-code/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-06-separate-verification-code/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-07-update-password/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-08-rememberme/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-09-rememberme-separate/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-10-session-management/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-11-csrf-attack/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-11-csrf-bank/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-12-csrf-web/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-12-csrf-separate/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-13-cors/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

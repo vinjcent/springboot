@@ -1,0 +1,28 @@
+# 端口号
+server:
+  port: 3035
+# 服务应用名称
+spring:
+  application:
+    name: SpringSecurity02
+  # 关闭thymeleaf缓存(用于修改完之后立即生效)
+  thymeleaf:
+    cache: false
+  # 数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+mybatis:
+  # 注意 mapper 映射文件必须使用"/"
+  type-aliases-package: com.vinjcent.pojo
+  mapper-locations: com/vinjcent/mapper/**/*.xml
+
+# 日志处理,为了展示 mybatis 运行 sql 语句
+logging:
+  level:
+    com:
+      vinjcent:
+        debug

@@ -1,0 +1,66 @@
+package com.vinjcent.filter;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.http.MediaType;
+import org.springframework.security.authentication.AuthenticationServiceException;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.AuthenticationException;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices;
+import org.springframework.util.ObjectUtils;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
+
+/**
+ * 自定义前后端分离的 Filter,重写 UsernamePasswordAuthenticationFilter
+ */
+public class LoginFilter extends UsernamePasswordAuthenticationFilter {
+
+    // 用于指定请求类型
+    private boolean postOnly = true;
+
+    @Override
+    public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
+        // 1.判断是否满足 POST 类型的请求
+        if (this.postOnly && !request.getMethod().equals("POST")) {
+            throw new AuthenticationServiceException("Authentication method not supported: " + request.getMethod());
+        }
+        // 2.判断使用的数据格式类型是否是json
+        if (request.getContentType().equalsIgnoreCase(MediaType.APPLICATION_JSON_VALUE)) {
+            // 如果是json格式,需要转化成对象并从中获取用户输入的用户名和密码进行认证 {"username": "root", "password": "123", "remember-me": "true"}
+            try {
+                Map<String, String> userInfo = new ObjectMapper().readValue(request.getInputStream(), Map.class);
+                // 将用户名(username)和密码(password)通过动态传递的方式,进行获取
+                // getUsernameParameter()、getPasswordParameter()是父类的方法,通过父类设置这两个属性的值
+                String username = userInfo.get(getUsernameParameter());
+                String password = userInfo.get(getPasswordParameter());
+                // 可以进行修改,使其成为动态参数
+                String rememberMe = userInfo.get(AbstractRememberMeServices.DEFAULT_PARAMETER);
+                // 如果 rememberMe 不为空
+                if (!ObjectUtils.isEmpty(rememberMe)) {
+                    // 将其存储request作用域
+                    request.setAttribute(AbstractRememberMeServices.DEFAULT_PARAMETER, rememberMe);
+                }
+                System.out.println("用户名: " + username + " 密码: " + password +  " 是否记住我: " + rememberMe);
+                // 生成用户令牌
+                UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(username, password);
+                setDetails(request, token);
+                // 为了保证自定义的过滤器拥有 AuthenticationManager,我们还需手动配置一个
+                return this.getAuthenticationManager().authenticate(token);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+        return super.attemptAuthentication(request, response);
+    }
+
+    @Override
+    public void setPostOnly(boolean postOnly) {
+        this.postOnly = postOnly;
+    }
+}

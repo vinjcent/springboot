@@ -1,0 +1,8 @@
+# 端口号
+server:
+  port: 3035
+# 服务应用名称
+spring:
+  application:
+    name: SpringSecurity01
+

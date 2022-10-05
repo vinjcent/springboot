@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-security-02" />
+        <module name="spring-security-07-update-password" />
+        <module name="spring-security-01" />
+        <module name="spring-security-13-cors" />
+        <module name="spring-security-08-rememberme" />
+        <module name="spring-security-11-csrf-bank" />
+        <module name="spring-security-04-separate" />
+        <module name="spring-security-06-separate-verification-code" />
+        <module name="spring-security-05-web-verification-code" />
+        <module name="spring-security-10-session-management" />
+        <module name="spring-security-03-web" />
+        <module name="spring-security-11-csrf-attack" />
+        <module name="spring-security-12-csrf-web" />
+        <module name="spring-security-09-rememberme-separate" />
+        <module name="spring-security-12-csrf-separate" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="spring-security-01" target="1.8" />
+      <module name="spring-security-02" target="1.8" />
+      <module name="spring-security-03-web" target="1.8" />
+      <module name="spring-security-04-separate" target="1.8" />
+      <module name="spring-security-05-web-verification-code" target="1.8" />
+      <module name="spring-security-06-separate-verification-code" target="1.8" />
+      <module name="spring-security-07-update-password" target="1.8" />
+      <module name="spring-security-08-rememberme" target="1.8" />
+      <module name="spring-security-09-rememberme-separate" target="1.8" />
+      <module name="spring-security-10-session-management" target="1.8" />
+      <module name="spring-security-11-csrf-attack" target="1.8" />
+      <module name="spring-security-11-csrf-bank" target="1.8" />
+      <module name="spring-security-12-csrf-separate" target="1.8" />
+      <module name="spring-security-12-csrf-web" target="1.8" />
+      <module name="spring-security-13-cors" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

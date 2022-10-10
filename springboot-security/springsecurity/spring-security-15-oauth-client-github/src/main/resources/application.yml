@@ -1,0 +1,18 @@
+# 端口号
+server:
+  port: 3035
+spring:
+  application:
+    # 服务应用名称
+    name: spring-security-15-oauth-client-github
+  # security配置
+  security:
+    oauth2:
+      client:
+        # registration map<String, OAuth2ClientProperties.Registration>集合
+        registration:
+          github:
+            client-id: f3ba05213100d3fd27d4
+            client-secret: 02d44b391f64016ff549e0c03b718de960cd761c
+            # 一定要与重定向回调 URL 一致
+            redirect-uri: http://localhost:3035/login/oauth2/code/github

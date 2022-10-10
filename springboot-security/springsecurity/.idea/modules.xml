@@ -17,6 +17,10 @@
       <module fileurl="file://$PROJECT_DIR$/spring-security-12-csrf-separate/spring-security-12-csrf-separate.iml" filepath="$PROJECT_DIR$/spring-security-12-csrf-separate/spring-security-12-csrf-separate.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-security-12-csrf-web/spring-security-12-csrf-web.iml" filepath="$PROJECT_DIR$/spring-security-12-csrf-web/spring-security-12-csrf-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-security-13-cors/spring-security-13-cors.iml" filepath="$PROJECT_DIR$/spring-security-13-cors/spring-security-13-cors.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-14-authorize/spring-security-14-authorize.iml" filepath="$PROJECT_DIR$/spring-security-14-authorize/spring-security-14-authorize.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-15-oauth-client-github/spring-security-15-oauth-client-github.iml" filepath="$PROJECT_DIR$/spring-security-15-oauth-client-github/spring-security-15-oauth-client-github.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-16-authorization-server/spring-security-16-authorization-server.iml" filepath="$PROJECT_DIR$/spring-security-16-authorization-server/spring-security-16-authorization-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-security-17-resource-server/spring-security-17-resource-server.iml" filepath="$PROJECT_DIR$/spring-security-17-resource-server/spring-security-17-resource-server.iml" />
     </modules>
   </component>
 </project>

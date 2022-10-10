@@ -20,6 +20,10 @@
         <option value="$PROJECT_DIR$/spring-security-12-csrf-web/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-12-csrf-separate/pom.xml" />
         <option value="$PROJECT_DIR$/spring-security-13-cors/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-14-authorize/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-15-oauth-client-github/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-16-authorization-server/pom.xml" />
+        <option value="$PROJECT_DIR$/spring-security-17-resource-server/pom.xml" />
       </list>
     </option>
   </component>

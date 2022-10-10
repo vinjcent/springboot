@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -11,14 +12,18 @@
         <module name="spring-security-01" />
         <module name="spring-security-13-cors" />
         <module name="spring-security-08-rememberme" />
+        <module name="spring-security-14-authorize" />
         <module name="spring-security-11-csrf-bank" />
         <module name="spring-security-04-separate" />
         <module name="spring-security-06-separate-verification-code" />
         <module name="spring-security-05-web-verification-code" />
         <module name="spring-security-10-session-management" />
+        <module name="spring-security-15-oauth-client-github" />
         <module name="spring-security-03-web" />
+        <module name="spring-security-17-resource-server" />
         <module name="spring-security-11-csrf-attack" />
         <module name="spring-security-12-csrf-web" />
+        <module name="spring-security-16-authorization-server" />
         <module name="spring-security-09-rememberme-separate" />
         <module name="spring-security-12-csrf-separate" />
       </profile>
@@ -39,6 +44,10 @@
       <module name="spring-security-12-csrf-separate" target="1.8" />
       <module name="spring-security-12-csrf-web" target="1.8" />
       <module name="spring-security-13-cors" target="1.8" />
+      <module name="spring-security-14-authorize" target="1.8" />
+      <module name="spring-security-15-oauth-client-github" target="1.8" />
+      <module name="spring-security-16-authorization-server" target="1.8" />
+      <module name="spring-security-17-resource-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -85,11 +85,12 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
 
         // 替换原始 UsernamePasswordAuthenticationFilter 过滤器
         http.addFilterAt(loginKaptchaFilter(), UsernamePasswordAuthenticationFilter.class);
+
         /**
-            http.addFilter();   // 添加一个过滤器
-            http.addFilterAt(); // at: 添加一个过滤器,将过滤链中的某个过滤器进行替换
-            http.addFilterBefore(); // before: 添加一个过滤器,追加到某个具体过滤器之前
-            http.addFilterAfter();  // after: 添加一个过滤器,追加到某个具体过滤器之后
+         *   http.addFilter();   // 添加一个过滤器
+         *   http.addFilterAt(); // at: 添加一个过滤器,将过滤链中的某个过滤器进行替换
+         *   http.addFilterBefore(); // before: 添加一个过滤器,追加到某个具体过滤器之前
+         *   http.addFilterAfter();  // after: 添加一个过滤器,追加到某个具体过滤器之后
          */
 
     }

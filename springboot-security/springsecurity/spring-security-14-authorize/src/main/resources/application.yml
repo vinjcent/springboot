@@ -1,0 +1,26 @@
+# 端口号
+server:
+  port: 8080
+
+spring:
+  application:
+    # 应用名称
+    name: SpringSecurity014
+  # 数据源
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springsecurity?useSSL=true&useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+# mybatis
+mybatis:
+  type-aliases-package: com.vinjcent.pojo
+  mapper-locations: classpath:com/vinjcent/mapper/*.xml
+
+# 日志打印
+logging:
+  level:
+    com:
+      vinjcent:
+        debug
